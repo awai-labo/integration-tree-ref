@@ -137,10 +137,8 @@
     position: fixed; inset: 0; z-index: 200;
     background: rgba(4,4,8,0.97);
     overflow-y: auto;
-    padding: 0 0 4rem;
-    flex-direction: column;
   }
-  #viewModal.open { display: flex; }
+  #viewModal.open { display: block; }
 
   .modal-header {
     position: sticky; top: 0;
@@ -155,7 +153,14 @@
   .btn-close { background:transparent; border:1px solid var(--border); border-radius:3px; padding:0.3rem 0.7rem; color:var(--muted); font-family:'Cinzel',serif; font-size:0.6rem; cursor:pointer; letter-spacing:0.1em; }
   .btn-close:hover { border-color:var(--gold); color:var(--gold); }
 
-  .modal-cards { padding: 1rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+  .modal-cards {
+    padding: 1rem 1rem 4rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
   @media (min-width: 640px) {
     .modal-cards { grid-template-columns: repeat(2, 1fr); }
   }
